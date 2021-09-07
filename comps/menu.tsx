@@ -16,9 +16,9 @@ export default function ee() {
   const [mdisplay, cdisplay] = useState("none");
 
   return (
-    <Flex direction="column">
-      <Flex justify="space-between" align="baseline" w="100%" p={2}>
-        {shit('row',true)}
+    <Flex direction="column" pos='fixed' top='0' w='100%' bgColor={colorMode === "light" ? "gray.100" : "gray.700"} opacity='98%'>
+      <Flex justify="space-between" align="baseline" w="100%" >
+        {shit('row',true,cdisplay)}
         <IconButton
           aria-label="Menu"
           size="lg"
@@ -28,6 +28,9 @@ export default function ee() {
           onClick={() => cdisplay("flex")}
           color={colorMode === "light" ? "black" : "white"}
           bgColor={colorMode === "light" ? "gray.100" : "gray.700"}
+          my={2}
+
+            ml={4}
         />
         <Flex>
           <Switch
@@ -63,60 +66,65 @@ export default function ee() {
         </Flex>
 
         <Flex direction="column" align="center" w="100vw" h="100vh" zIndex={20}>
-        {shit('column',false)}
+        {shit('column',false,cdisplay)}
         </Flex>
       </Flex>
     </Flex>
   );
 }
 
-function shit (direction:any,ham:any){
+function shit (direction:any,ham:any,cdisplay:any){
   const full=["none", "none", "flex", "flex"]
   const min=["flex", "flex", "none", "none"]
   const mdirection=ham?full:min;
   const { colorMode, toggleColorMode } = UCM();
 
+
   return (
 
     <Flex display={mdirection} direction={direction}>
-          <Link href="www.google.com" passHref>
+          <Link href="#top" passHref>
             <Button
               variant="ghost"
               m={4}
               color=  {colorMode === "light" ? "black" : "white"}
               fontSize="28"
-              fontWeight="400"
+              fontWeight="300"
               w="100%"
               h={12}
               _hover={{ bg: "#FFFFFF",color:'#6C757D' }}
+              onClick={() => cdisplay("none")}
             >
               Home
             </Button>
           </Link>
-          <Link href='www.google.com' passHref>
+          <Link href='#about' passHref>
           <Button
           variant='ghost'
             m={4}
             color=  {colorMode === "light" ? "black" : "white"}
             fontSize="28"
-            fontWeight="400"
+            fontWeight="300"
             w="100%"
             h={12}
             _hover={{ bg: "#FFFFFF",color:'#6C757D' }}
+            onClick={() => cdisplay("none")}
           >
             About Us
           </Button>
           </Link>
-          <Link href='www.google.com' passHref>
+
+          <Link href='#tech' passHref>
           <Button
           variant='ghost'
             m={4}
             color=  {colorMode === "light" ? "black" : "white"}
             fontSize="28"
-            fontWeight="400"
+            fontWeight="300"
             w="100%"
             h={12}
             _hover={{ bg: "#FFFFFF",color:'#6C757D' }}
+            onClick={() => cdisplay("none")}
           >
             Technology
           </Button>

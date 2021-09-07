@@ -21,15 +21,20 @@ const Home: NextPage = () => {
       justify="center"
       direction="column"
       bgColor={colorMode === "light" ? "white" : "gray.800"}
+      id="top"
+      w='100%'
+      
     >
-      <Menu></Menu>
-      <Flex minH="500px" direction="column" align="center">
+      <Menu/>
+      <Flex minH="500px" direction="column" align="center" mt={10} >
         <Image
           src={logo}
           alt=""
           objectFit="cover"
           boxSize={[200, 300, 400, 500]}
         />
+        <Flex justify='end'>
+
         <Text
           align="center"
           fontSize={[40,70,60,85]}
@@ -38,6 +43,7 @@ const Home: NextPage = () => {
         >
           Putting the AI in drive
         </Text>
+        </Flex>
       </Flex>
 
       <Flex
@@ -53,6 +59,7 @@ const Home: NextPage = () => {
           fontWeight="300"
           fontSize="60px"
           color="white"
+          id="about"
         >
           About us
         </Text>
@@ -71,7 +78,7 @@ const Home: NextPage = () => {
           with the utmost professionalism, passion, and consciousness.
         </Text>
       </Flex>
-      <Flex p={[4,10,20,20]} minH="350px" direction="column" align="center">
+      <Flex p={[4,10,20,20]} minH="350px" direction="column" align="center" id="tech">
         <Text
           color={colorMode === "light" ? "black" : "white"}
           align="center"
@@ -93,8 +100,8 @@ const Home: NextPage = () => {
         </Text>
       </Flex>
 
-      <Flex  minH="400px" direction="column" align="center"  my={10}>
-        <SimpleGrid columns={[1, null, 2]} spacing="8">
+      <Flex  minH="400px" direction="column" align="center"  my={10} >
+        <SimpleGrid columns={[1, null, 2]} spacing="7">
           <Card
             image="https://avatars.githubusercontent.com/u/4201559?s=200&v=4"
             title="Project Reactor"
