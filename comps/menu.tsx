@@ -92,7 +92,7 @@ function shit (direction:any,ham:any,cdisplay:any){
               fontWeight="300"
               w="100%"
               h={12}
-              _hover={{ bg: "#FFFFFF",color:'#6C757D' }}
+              _hover={{ color:'#6C757D' }}
               onClick={() => cdisplay("none")}
             >
               Home
@@ -107,7 +107,7 @@ function shit (direction:any,ham:any,cdisplay:any){
             fontWeight="300"
             w="100%"
             h={12}
-            _hover={{ bg: "#FFFFFF",color:'#6C757D' }}
+            _hover={{ color:'#6C757D' }}
             onClick={() => cdisplay("none")}
           >
             About Us
@@ -123,7 +123,7 @@ function shit (direction:any,ham:any,cdisplay:any){
             fontWeight="300"
             w="100%"
             h={12}
-            _hover={{ bg: "#FFFFFF",color:'#6C757D' }}
+            _hover={{color:'#6C757D' }}
             onClick={() => cdisplay("none")}
           >
             Technology

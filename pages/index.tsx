@@ -26,19 +26,19 @@ const Home: NextPage = () => {
       
     >
       <Menu/>
-      <Flex minH="500px" direction="column" align="center" mt={10} >
+      <Flex minH="400px" direction="column" align="center" mt={12} pt={10} >
         <Image
           src={logo}
           alt=""
           objectFit="cover"
-          boxSize={[200, 300, 400, 500]}
+          boxSize={[300, 300, 400, 500]}
         />
         <Flex justify='end'>
 
         <Text
           align="center"
-          fontSize={[40,70,60,85]}
-          fontWeight="100"
+          fontSize={[60,70,60,85]}
+          fontWeight="300"
           color={colorMode === "light" ? "black" : "white"}
         >
           Putting the AI in drive
