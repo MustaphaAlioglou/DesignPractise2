@@ -18,10 +18,10 @@ const Home: NextPage = () => {
       </Flex>
 
       <Flex p={20} minH="350px" direction="column" align="center" bgGradient="linear(to-r, #4032EE, #941DE3)" >
-        <Text  align='center' as='h2' fontWeight='300' fontSize='60px'>
+        <Text  align='center' as='h2' fontWeight='300' fontSize='60px' color ='white'>
           About us
         </Text>
-        <Text as='h3' fontWeight='300' fontSize='20px' align='center'>
+        <Text as='h3' fontWeight='300' fontSize='20px' align='center' color ='white'>
         With draive we aspire to achieve fully autonomous driving. 
         To get there, we are building our own, modular and highly 
         efficient, platform that manages the entire training process 
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
   project reactor and reactive programming.'     
      />
        <Card
-     image='https://brandslogos.com/wp-content/uploads/images/large/rabbitmq-logo-vector.svg'
+     image='https://cdn.freebiesupply.com/logos/large/2x/rabbitmq-logo-png-transparent.png'
   title='RabbitMQ'
   desc='A lightweight message broker, utilized to connect all our microservices in a scalable manner.'     
      />
